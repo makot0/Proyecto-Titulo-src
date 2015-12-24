@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9131DDB2-D4A4-4A03-82FE-7BC7B12D5D60}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SantoTomas</RootNamespace>
+    <AssemblyName>SantoTomas</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.0.1.29147, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCodeNet.0.3\lib\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compuMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compuMenu.Designer.cs">
+      <DependentUpon>compuMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DSCompleto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCompleto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsnet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsnet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsnetworking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsnetworking.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="encargadopc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="encargadopc.Designer.cs">
+      <DependentUpon>encargadopc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IP.Designer.cs">
+      <DependentUpon>IP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenciones.Designer.cs">
+      <DependentUpon>Mantenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Networking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Networking.Designer.cs">
+      <DependentUpon>Networking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDatacompu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDatacompu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSet.cs">
+      <DependentUpon>proyectoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSetcompu222.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSetcompu222.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSetPC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSetPC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSettpc222.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSettpc222.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDataSetubi222.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSetubi222.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectoDssysusers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDssysusers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="queryDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>queryDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="repo1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repo1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tipopcds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tipopcds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ubicacionds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ubicacionds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compuMenu.resx">
+      <DependentUpon>compuMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="encargadopc.resx">
+      <DependentUpon>encargadopc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IP.resx">
+      <DependentUpon>IP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenciones.resx">
+      <DependentUpon>Mantenciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Networking.resx">
+      <DependentUpon>Networking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DSCompleto.xsc">
+      <DependentUpon>DSCompleto.xsd</DependentUpon>
+    </None>
+    <None Include="DSCompleto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCompleto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCompleto.xss">
+      <DependentUpon>DSCompleto.xsd</DependentUpon>
+    </None>
+    <None Include="dsnet.xsc">
+      <DependentUpon>dsnet.xsd</DependentUpon>
+    </None>
+    <None Include="dsnet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsnet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsnet.xss">
+      <DependentUpon>dsnet.xsd</DependentUpon>
+    </None>
+    <None Include="dsnetworking.xsc">
+      <DependentUpon>dsnetworking.xsd</DependentUpon>
+    </None>
+    <None Include="dsnetworking.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsnetworking.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsnetworking.xss">
+      <DependentUpon>dsnetworking.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="proyectoDatacompu.xsc">
+      <DependentUpon>proyectoDatacompu.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDatacompu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDatacompu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDatacompu.xss">
+      <DependentUpon>proyectoDatacompu.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSet.xsc">
+      <DependentUpon>proyectoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSet.xss">
+      <DependentUpon>proyectoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSet1.xsc">
+      <DependentUpon>proyectoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSet1.xss">
+      <DependentUpon>proyectoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSetcompu222.xsc">
+      <DependentUpon>proyectoDataSetcompu222.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSetcompu222.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSetcompu222.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSetcompu222.xss">
+      <DependentUpon>proyectoDataSetcompu222.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSetPC.xsc">
+      <DependentUpon>proyectoDataSetPC.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSetPC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSetPC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSetPC.xss">
+      <DependentUpon>proyectoDataSetPC.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSettpc222.xsc">
+      <DependentUpon>proyectoDataSettpc222.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSettpc222.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSettpc222.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSettpc222.xss">
+      <DependentUpon>proyectoDataSettpc222.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSetubi222.xsc">
+      <DependentUpon>proyectoDataSetubi222.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSetubi222.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSetubi222.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSetubi222.xss">
+      <DependentUpon>proyectoDataSetubi222.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDssysusers.xsc">
+      <DependentUpon>proyectoDssysusers.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDssysusers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDssysusers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDssysusers.xss">
+      <DependentUpon>proyectoDssysusers.xsd</DependentUpon>
+    </None>
+    <None Include="queryDS.xsc">
+      <DependentUpon>queryDS.xsd</DependentUpon>
+    </None>
+    <None Include="queryDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>queryDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="queryDS.xss">
+      <DependentUpon>queryDS.xsd</DependentUpon>
+    </None>
+    <None Include="repo1.xsc">
+      <DependentUpon>repo1.xsd</DependentUpon>
+    </None>
+    <None Include="repo1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>repo1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="repo1.xss">
+      <DependentUpon>repo1.xsd</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="tipopcds.xsc">
+      <DependentUpon>tipopcds.xsd</DependentUpon>
+    </None>
+    <None Include="tipopcds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tipopcds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tipopcds.xss">
+      <DependentUpon>tipopcds.xsd</DependentUpon>
+    </None>
+    <None Include="ubicacionds.xsc">
+      <DependentUpon>ubicacionds.xsd</DependentUpon>
+    </None>
+    <None Include="ubicacionds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ubicacionds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ubicacionds.xss">
+      <DependentUpon>ubicacionds.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\128-tasks.png" />
+    <None Include="Resources\icon-regulatory+ipb+w.png" />
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
